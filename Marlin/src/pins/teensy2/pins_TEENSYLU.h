@@ -18,11 +18,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.   If not, see <https://www.gnu.org/licenses/>.
  */
+#pragma once
 
 /**
  *  Rev C  2 JUN 2017
  *
  *  Converted to Arduino pin numbering
+ *
+ *  Schematic (1.0): https://green-candy.osdn.jp/external/MarlinFW/board_schematics/Teensylu%20v1.0/schematic.png
+ *  Origin (1.0): https://raw.githubusercontent.com/StephS/Teensylu/master/working/Teensylu-1.0.sch
+ *  (*) Other versions are discouraged by creator.
  */
 
 /**
@@ -144,7 +149,7 @@
 //
 // LCD / Controller
 //
-#if IS_ULTRA_LCD && IS_NEWPANEL
+#if HAS_WIRED_LCD && IS_NEWPANEL
 
   #define BEEPER_PIN                          -1
 
@@ -157,7 +162,7 @@
 
   #define SD_DETECT_PIN                       -1
 
-#endif // IS_ULTRA_LCD && IS_NEWPANEL
+#endif // HAS_WIRED_LCD && IS_NEWPANEL
 
 //
 // M3/M4/M5 - Spindle/Laser Control
